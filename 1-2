@@ -1,0 +1,30 @@
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+    int a,ind=1,chis=0,b;
+    cout << "Vvedite chislo" << endl;
+    cin >> a;
+    b = a;
+    while (a / 10 != 0) {
+        ind++;
+        a = a / 10;
+    }
+    for (int i = 0;i < ind;i++) {
+        a = b % 10;
+        if (a % 2 != 0) {
+            chis += 1;
+        }
+        b=b / 10;
+    }
+    if (chis == 0) {
+        cout << "FALSE";
+    }
+    else {
+        cout << "TRUE";
+    }
+    system("pause");
+    return 0;
+}
+
