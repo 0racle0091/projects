@@ -1,0 +1,30 @@
+#include <math.h>
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+    long double x,fac=1,s,ot=0;
+    long int n,n1;
+    cout << "vvedite x,n"<<endl;
+    cin >> x >> n;
+    n1 = n;
+    if (n < 0) {
+       cout << "n<0, dalneishee reshenie ne verno" << endl;
+    }
+    for (int i = 1;i <= n;i++) {
+            fac *= (2 * i - 1);
+        ot += pow(-1, i - 1) * pow(x,2*i-1)/fac;
+        cout << ot;
+    }
+   // cout <<"otvet     "<< ot;  Proverka 
+    s = sin(x);
+    if (x == s) {
+        cout << "    znachenie priblizsheno k funkcii sin(x)    " << endl;
+    }
+    else {
+        cout << "    znachenie ne priblizsheno k funkcii sin(x)    " << endl;
+    }
+    system("pause");
+    return 0;
+}
