@@ -1,0 +1,26 @@
+#include <math.h>
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+    int n,K,L,Summ=0,kol=0;
+    double arSUm;
+    cout << "vvedite kol-vo elem v massive";
+    cin >> n;
+    int* D = new int[n];
+        for (int i = 0;i < n; i++) {
+            cin >> D[i];
+    }
+        cout << " vvedite chisla K,L" << endl;
+        cin >> K >> L;
+        for (int i = K - 1;i < L;i++) {
+            Summ += D[i];
+            kol++;
+        }
+        arSUm = Summ / kol;
+        cout << "srednee arifmeticheskoe = " << arSUm;
+    system("pause");
+    return 0;
+}
+
