@@ -1,0 +1,29 @@
+#include <math.h>
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+    double V=10,P,S=10;
+    int K=1;
+    cout << "vvedite procent" << endl;
+    cin >> P;
+    if (P < 0) {
+        cout << "neverno zadann procent, dalneyshee reshenie ne verno" << endl;
+    }
+    else {
+        if (P > 30) {
+            cout << "neverno zadann procent, dalneyshee reshenie ne verno" << endl;
+        }
+    }
+    while (S <= 200) {
+        V *= (1 + P / 100);
+        S+= V;
+        K++;
+        cout << V;
+    }
+    cout << "Summarniy probeg = " << S << endl;
+    cout << "kol-vo dney = " << K << endl;
+    system("pause");
+    return 0;
+}
